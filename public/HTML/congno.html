@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order History</title>
+    <link rel="stylesheet" href="../CSS/navbar-ad.css" />
+    <link rel="stylesheet" href="../CSS/congno.css" />
+  </head>
+
+  <body>
+    <!-- Navbar placeholder -->
+    <header id="navbar-placeholder"></header>
+
+    <!-- Line art decoration -->
+    <div class="line-art">
+      <div class="line line-1"></div>
+      <div class="line line-2"></div>
+      <div class="line line-3"></div>
+    </div>
+
+    <h1>CÔNG NỢ THÁNG 9</h1>
+
+    <!-- Search bar -->
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Tìm Kiếm Đơn Hàng" />
+      <span class="search-icon">🔍</span>
+      <span class="cross-icon" style="display: none">❌</span>
+    </div>
+
+    <!-- Container for dynamically loaded orders -->
+    <div class="container" id="order-container"></div>
+
+    <!-- Input container for editing/adding new orders -->
+    <div class="input-container" id="input-container" style="display: none">
+      <div class="column">
+        <div class="input-field">
+          <label for="order-number">Mã Đơn:</label>
+          <input type="text" id="order-number" placeholder="Nhập mã đơn" />
+        </div>
+        <div class="input-field">
+          <label for="company-name">Công Ty:</label>
+          <input type="text" id="company-name" placeholder="Nhập tên Công Ty" />
+        </div>
+        <div class="input-field">
+          <label for="products">Sản Phẩm:</label>
+          <input type="text" id="products" placeholder="Nhập Sản Phẩm" />
+        </div>
+        <div class="input-field">
+          <label for="price">Giá:</label>
+          <input type="text" id="price" placeholder="Nhập giá trị đơn" />
+        </div>
+        <div class="input-field">
+          <label for="condition">Trạng Thái:</label>
+          <input
+            type="text"
+            id="condition"
+            placeholder="Nhập trạng thái đơn hàng"
+          />
+        </div>
+      </div>
+      <div class="column">
+        <div class="input-field">
+          <label for="image-upload">Bill:</label>
+          <input
+            type="file"
+            id="image-upload"
+            style="display: none"
+            accept="image/*"
+          />
+        </div>
+        <div class="bill-photo">
+          <img
+            src="../Assets/images/photo.png"
+            alt="Bill Photo"
+            class="add-photo"
+            id="bill-photo"
+          />
+        </div>
+        <div class="button-container">
+          <button class="save-button" id="save-button">Lưu</button>
+          <button class="cancel-button" id="cancel-button">Huỷ</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Uploaded photo display container -->
+    <div
+      id="uploaded-photo-container"
+      style="
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 1001;
+      "
+    >
+      <img
+        id="uploaded-bill-photo"
+        src=""
+        alt="Uploaded Bill Photo"
+        style="max-width: 300px; max-height: 300px"
+      />
+    </div>
+
+    <!-- Add button -->
+    <img
+      src="../Assets/images/add.png"
+      alt="Add Icon"
+      class="add-button"
+      id="add-button"
+    />
+
+    <!-- JavaScript files -->
+    <script src="../JavaScript/congno.js"></script>
+    <script src="../JavaScript/navbar-ad.js"></script>
+  </body>
+</html>

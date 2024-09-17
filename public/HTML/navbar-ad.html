@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <link rel="stylesheet" href="../CSS/navbar-ad.css" />
+  </head>
+  <body>
+    <div class="navbar" id="navbar">
+      <div class="top-section">
+        <div class="left">
+          <img
+            src="../Assets/images/logo.png"
+            alt="VINA Design Logo"
+            class="logo"
+          />
+        </div>
+        <div class="profile-button" onclick="location.href='profile.html'">
+          <span class="username" id="username">Username</span>
+          <img
+            src="../Assets/images/profile.png"
+            alt="Profile Image"
+            class="profile-img"
+          />
+        </div>
+      </div>
+      <div class="middle">
+        <button onclick="location.href='home-ad.html'" class="nav-btn">
+          <div class="icon-circle">
+            <img
+              src="../Assets/images/homeicon.png"
+              alt="Home Icon"
+              class="nav-icon"
+            />
+          </div>
+          <span>HOME</span>
+        </button>
+        <button onclick="location.href='report-ad.html'" class="nav-btn">
+          <div class="icon-circle">
+            <img
+              src="../Assets/images/form.png"
+              alt="Home Icon"
+              class="nav-icon"
+            />
+          </div>
+          <span>BÁO CÁO</span>
+        </button>
+        <button onclick="location.href='product.html'" class="nav-btn">
+          <div class="icon-circle">
+            <img
+              src="../Assets/images/plus.png"
+              alt="Home Icon"
+              class="nav-icon"
+            />
+          </div>
+          <span>SẢN PHẨM</span>
+        </button>
+        <button onclick="location.href='search-ad.html'" class="nav-btn">
+          <div class="icon-circle">
+            <img
+              src="../Assets/images/search.png"
+              alt="Home Icon"
+              class="nav-icon"
+            />
+          </div>
+          <span>TÌM KIẾM</span>
+        </button>
+        <button onclick="location.href='humanresource.html'" class="nav-btn">
+          <div class="icon-circle">
+            <img
+              src="../Assets/images/hr-06.png"
+              alt="Home Icon"
+              class="nav-icon"
+            />
+          </div>
+          <span> QUẢN LÝ NV</span>
+        </button>
+        <button onclick="location.href='congno.html'" class="nav-btn">
+          <div class="icon-circle">
+            <img
+              src="../Assets/images/congno-04.png"
+              alt="Home Icon"
+              class="nav-icon"
+            />
+          </div>
+          <span> CÔNG NỢ</span>
+        </button>
+      </div>
+      <div class="right">
+        <img
+          src="../Assets/images/noti.png"
+          alt="Notification"
+          class="notification-img"
+        />
+        <div class="notifications-container" id="notifications-container"></div>
+      </div>
+      <!-- Toggle Button -->
+      <div class="toggle-btn" id="toggle-btn" onclick="toggleNavbar()">
+        <img src="../Assets/images/toggle-05.png" alt="Toggle Arrow" />
+      </div>
+    </div>
+
+    <script src="../JS/navbar-ad.js"></script>
+  </body>
+</html>

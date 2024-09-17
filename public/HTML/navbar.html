@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VINA Design Dashboard</title>
+    <link rel="stylesheet" href="../CSS/navbar.css" />
+  </head>
+  <body>
+    <div class="navbar" id="navbar">
+      <div class="top-section">
+        <div class="left">
+          <img
+            src="../Assets/images/logo.png"
+            alt="VINA Design Logo"
+            class="logo"
+          />
+        </div>
+        <div class="profile-button" onclick="location.href='profile.html'">
+          <span class="username" id="username">Username</span>
+          <img
+            src="../Assets/images/profile.png"
+            alt="Profile Image"
+            class="profile-img"
+          />
+        </div>
+      </div>
+      <div class="middle">
+        <button onclick="location.href='home.html'" class="nav-btn">
+          <div class="icon-circle">
+            <img
+              src="../Assets/images/homeicon.png"
+              alt="Home Icon"
+              class="nav-icon"
+            />
+          </div>
+          <span>HOME</span>
+        </button>
+        <!-- Updated button for Báo Cáo -->
+        <button onclick="redirectToUserReport()" class="nav-btn">
+          <div class="icon-circle">
+            <img
+              src="../Assets/images/form.png"
+              alt="Report Icon"
+              class="nav-icon"
+            />
+          </div>
+          <span>BÁO CÁO</span>
+        </button>
+        <button onclick="location.href='create-order.html'" class="nav-btn">
+          <div class="icon-circle">
+            <img
+              src="../Assets/images/plus.png"
+              alt="Create Order Icon"
+              class="nav-icon"
+            />
+          </div>
+          <span>TẠO ĐƠN</span>
+        </button>
+        <button onclick="location.href='search.html'" class="nav-btn">
+          <div class="icon-circle">
+            <img
+              src="../Assets/images/search.png"
+              alt="Search Icon"
+              class="nav-icon"
+            />
+          </div>
+          <span>TÌM KIẾM</span>
+        </button>
+        <button onclick="location.href='checkprice.html'" class="nav-btn">
+          <div class="icon-circle">
+            <img
+              src="../Assets/images/check.png"
+              alt="Check Price Icon"
+              class="nav-icon"
+            />
+          </div>
+          <span>KIỂM GIÁ</span>
+        </button>
+      </div>
+      <div class="right">
+        <img
+          src="../Assets/images/noti.png"
+          alt="Notification"
+          class="notification-img"
+        />
+        <div class="notifications-container" id="notifications-container"></div>
+      </div>
+      <!-- Removed onclick from the button -->
+      <div class="toggle-btn" id="toggle-btn">
+        <img src="../Assets/images/toggle-05.png" alt="Toggle Arrow" />
+      </div>
+    </div>
+    <script src="../JS/navbar.js"></script>
+    <script>
+      // Function to redirect to the report page with the logged-in user's name
+      function redirectToUserReport() {
+        const userName = localStorage.getItem("username") || "Default User";
+        const encodedUserName = encodeURIComponent(userName);
+        const reportUrl = `/HTML/report.html?name=${encodedUserName}`;
+        location.href = reportUrl;
+      }
+
+      localStorage.setItem("username", "Anne Truong"); // Example of setting username
+    </script>
+  </body>
+</html>

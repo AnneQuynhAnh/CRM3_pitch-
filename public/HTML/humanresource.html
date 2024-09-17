@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Báo Cáo Thu Nhập</title>
+    <link rel="stylesheet" href="../CSS/humanresource.css" />
+    <link rel="stylesheet" href="../CSS/navbar-ad.css" />
+  </head>
+  <body>
+    <header id="navbar-placeholder"></header>
+
+    <!-- Search bar section -->
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Tìm Kiếm Nhân Sự" />
+      <span class="search-icon">🔍</span>
+      <span class="cross-icon" style="display: none">❌</span>
+    </div>
+
+    <!-- Grid of rectangle containers -->
+    <div class="grid-container">
+      <!-- User profiles will be dynamically loaded here by JavaScript -->
+    </div>
+
+    <!-- Info Box -->
+    <div id="info-box" class="info-box">
+      <div class="info-header">
+        <h2 class="info-name">Anne Truong</h2>
+        <h3 class="info-position">chưa cập nhật</h3>
+        <p class="info-date">
+          Date Joined: <span id="info-date">0000-00-00</span>
+        </p>
+        <span class="close-btn">×</span>
+        <!-- Ensure this is correct -->
+      </div>
+      <ul class="info-details">
+        <li>
+          <img
+            src="../Assets/images/blhomeicon-02.jpg"
+            alt="Address Icon"
+            class="info-icon"
+          />
+          <span id="info-address"> chưa cập nhật</span>
+        </li>
+        <li>
+          <img
+            src="../Assets/images/phone.png"
+            alt="Phone Icon"
+            class="info-icon"
+          />
+          <span id="info-phone">: 917232367</span>
+        </li>
+        <li>
+          <img
+            src="../Assets/images/mail.png"
+            alt="Email Icon"
+            class="info-icon"
+          />
+          <span id="info-email"> s3978161@rmit.edu.vn</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Evaluation-->
+    <div id="evaluation-box" class="evaluation-box" style="display: none">
+      <div class="evaluation-header">
+        <h2 class="evaluation-title">
+          Đánh giá nhân viên: <span class="employee-name"></span>
+        </h2>
+        <span class="close-btn">&times;</span>
+      </div>
+      <div class="evaluation-content">
+        <h2 class="info-position">Nhân viên bán hàng</h2>
+        <p class="evaluation-month"></p>
+        <div class="rating-container">
+          <div class="rating-row">
+            <span class="rating-label">Hiệu suất làm việc:</span>
+            <div class="star-rating" data-rating-type="performance">
+              <span class="star" data-value="1">&#9733;</span>
+              <span class="star" data-value="2">&#9733;</span>
+              <span class="star" data-value="3">&#9733;</span>
+              <span class="star" data-value="4">&#9733;</span>
+              <span class="star" data-value="5">&#9733;</span>
+            </div>
+          </div>
+          <div class="rating-row">
+            <span class="rating-label">Thái độ:</span>
+            <div class="star-rating" data-rating-type="attitude">
+              <span class="star" data-value="1">&#9733;</span>
+              <span class="star" data-value="2">&#9733;</span>
+              <span class="star" data-value="3">&#9733;</span>
+              <span class="star" data-value="4">&#9733;</span>
+              <span class="star" data-value="5">&#9733;</span>
+            </div>
+          </div>
+        </div>
+        <div class="feedback-container">
+          <div class="feedback-box">
+            <h3>Điểm mạnh</h3>
+            <textarea id="strengths" rows="4"></textarea>
+          </div>
+          <div class="feedback-box">
+            <h3>Điểm yếu</h3>
+            <textarea id="weaknesses" rows="4"></textarea>
+          </div>
+        </div>
+        <button id="update-evaluation" class="update-btn">Cập nhật</button>
+      </div>
+    </div>
+
+    <!-- Chatbox -->
+    <div id="chatbox" class="chatbox" style="display: none">
+      <div class="chatbox-header">
+        <span id="chatbox-header-name">Chat</span>
+        <span id="chatbox-close" class="chatbox-close">x</span>
+      </div>
+      <div class="chatbox-body">
+        <p>Hello! How can I help you?</p>
+      </div>
+      <div class="chatbox-footer">
+        <input type="text" placeholder="Type a message..." />
+        <button>Gửi</button>
+      </div>
+    </div>
+
+    <!-- Include Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../JavaScript/humanresource.js"></script>
+    <script src="../JavaScript/navbar-ad.js"></script>
+  </body>
+</html>
